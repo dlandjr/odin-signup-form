@@ -19,7 +19,7 @@
   --green: #596d48;
   --input-field-bg-color: rgb(128, 128, 128, 20%);
   --bg-image: url("images/matteo-minelli-unsplash.jpg");
-  --card-height: 720px;
+  --card-height: 660px;
   --card-width: 576px;
   --text-field-width: 300px;
   --button-width: 300px;
@@ -41,29 +41,52 @@ body {
 }
 
 header {
-  width: 100vw; /* Full width */
-  height: 100px; /* Adjust height as needed */
-  /* background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+  width: 100vw;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px; /* Adjust spacing if needed */
-  padding: 20px; /* Adds space inside the header */
-  position: fixed; /* Keeps it at the top while scrolling */
+  gap: 30px;
+  padding: 20px;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensures it stays on top */
+  z-index: 1000;
 }
 
 header h1 {
-  font-size: 4rem; /* Adjust based on preference */
-  color: white; /* Ensures visibility */
+  font-size: 4rem;
+  color: white;
   margin: 0;
 }
 
 header img {
-  height: 4rem; /* Matches h1 font size */
-  width: auto; /* Maintains aspect ratio */
+  height: 5rem;
+  width: auto;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--green);
+  font-weight: 800;
+}
+
+.heading h1 {
+  margin-top: 24px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.heading h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
 
 main {
@@ -80,35 +103,25 @@ main {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.heading {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: var(--green);
-  font-weight: 800;
-}
-
 form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 48px;
+  margin-top: 24px;
 }
 
 .input-boxes {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 /* Floating Label Style */
 .input-box {
   position: relative;
   width: var(--text-field-width);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .input-box input {
@@ -131,6 +144,7 @@ form {
   padding: 0 5px;
   font-size: 1rem;
   color: grey;
+  /* background-color: var(--main-bg-color); */
   transition: all 0.3s ease-in-out;
 }
 
@@ -141,34 +155,17 @@ form {
 
 .input-box input:focus + label,
 .input-box input:not(:placeholder-shown) + label {
-  top: 0;
-  left: 8px;
-  font-size: 0.85rem;
+  top: -10px;
+  left: 0px;
+  font-size: 1rem;
   color: #007bff;
-}
-/*
-.form-column {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding: 0 5px;
 }
 
-label{
-  font-size: 18px;
-  font-weight: 500;
+input:user-invalid,
+input:user-invalid + label {
+  --border-color: red;
 }
-
-input {
-  width: var(--text-field-width);
-  height: 40px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  background-color: var(--input-field-bg-color);
-  outline: none;
-  padding: 6px;
-}
-*/
 
 button {
   width: var(--button-width);
@@ -208,16 +205,15 @@ button:hover {
 }
 
 footer {
-  width: 100vw; /* Full width */
-  height: 50px; /* Adjust height as needed */
-  /* background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+  width: 100vw;
+  height: 50px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centers text horizontally */
-  position: fixed; /* Sticks to the bottom */
+  justify-content: center;
+  position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1000; /* Keeps it above other content */
+  z-index: 1000;
 }
 
 footer p {
@@ -227,7 +223,7 @@ footer p {
 }
 
 footer a {
-  color: #ffc0a5; /* Lighter text for links */
+  color: #ffc0a5;
   text-decoration: none;
   font-weight: bold;
 }
