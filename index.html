@@ -9,61 +9,53 @@
   </head>
   <body>
     <main>
-      <div class="bg-image">
-        <div class="logo-part">ODIN</div>
-        <div class="credits">
-          <p>
-            Photo by
-            <a href="https://unsplash.com/@matteominelli">Matteo Minelli</a>
-            on
-            <a href="https://unsplash.com/photos/green-grass-near-body-of-water-VgdFyOOu1PA">Unsplash</a>
-          </p>
-        </div>
-      </div>
+      <header>
+        <h1>The Odin Project</h1>
+        <img src="images/odin-lined.png" alt="odin-project-logo" />
+      </header>
       <div class="form-section">
         <div class="heading">
-          <img src="images/odin-lined.png" alt="odin-project-logo" />
-          <h1>Create an Account</h1>
+          <div class="odin">
+            <h1>ODIN</h1>
+            <!-- <img src="images/odin-lined.png" alt="odin-project-logo" /> -->
+          </div>
+          <h2>Create an Account</h2>
         </div>
         <form action="#" autocomplete="off">
           <div class="input-boxes">
-            <div class="form-row">
-              <div class="input-div">
-                <input type="text" id="first-name" placeholder=" " required />
-                <label for="first-name">First Name</label>
+            <div class="form-column">
+              <div class="input-box">
+                <input type="text" id="name" name="name" placeholder=" " required />
+                <label for="name">Name</label>
               </div>
-              <div class="input-div">
-                <input type="text" id="last-name" placeholder=" " required />
-                <label for="last-name">Last Name</label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="input-div">
-                <input type="email" id="email" placeholder=" " required />
+              <div class="input-box">
+                <input type="email" id="email" name="email" placeholder=" " required />
                 <label for="email">Email</label>
               </div>
-              <div class="input-div">
-                <input type="tel" id="phone-number" placeholder=" " required />
+              <div class="input-box">
+                <input type="tel" id="phone-number" name="phone-number" placeholder=" " required />
                 <label for="phone-number">Phone Number</label>
               </div>
-            </div>
-            <div class="form-row">
-              <div class="input-div">
-                <input type="password" id="password" placeholder=" " required />
+              <div class="input-box">
+                <input type="password" id="password" name="password" placeholder=" " required/>
                 <label for="password">Password</label>
-              </div>
-              <div class="input-div">
-                <input type="password" id="confirm-password" placeholder=" " required/>
-                <label for="confirm-password">Confirm Password</label>
               </div>
             </div>
           </div>
           <div class="button-area">
-            <button type="submit">Create Acount</button>
+            <button type="submit">Create Account</button>
             <p>Already have an Account? <a href="#">Log in</a></p>
           </div>
         </form>
       </div>
     </main>
+    <footer>
+      <p>
+        Photo by 
+        <a href="https://unsplash.com/@matteominelli">Matteo Minelli</a> 
+        on 
+        <a href="https://unsplash.com/photos/green-grass-near-body-of-water-VgdFyOOu1PA">Unsplash</a>
+      </p>
+    </footer>
   </body>
 </html>
