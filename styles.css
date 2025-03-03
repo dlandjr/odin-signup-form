@@ -19,8 +19,8 @@
   --green: #596d48;
   --input-field-bg-color: rgb(128, 128, 128, 20%);
   --bg-image: url("images/matteo-minelli-unsplash.jpg");
-  --card-height: 660px;
-  --card-width: 576px;
+  --card-height: 624px;
+  --card-width: 516px;
   --text-field-width: 300px;
   --button-width: 300px;
   --font-stack: "MyCustomFont", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
@@ -55,13 +55,13 @@ header {
 }
 
 header h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
   margin: 0;
 }
 
 header img {
-  height: 5rem;
+  height: 4rem;
   width: auto;
 }
 
@@ -90,6 +90,8 @@ header img {
 }
 
 main {
+  margin-top: 24px;
+  margin-bottom: 24px;
   width: var(--card-width);
   height: var(--card-height);
   background-color: var(--main-bg-color);
@@ -108,7 +110,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .input-boxes {
@@ -126,20 +128,21 @@ form {
 
 .input-box input {
   width: 100%;
-  height: 40px;
+  height: 30px;
   border: 2px solid var(--border-color);
   border-radius: 6px;
   background-color: var(--input-field-bg-color);
   outline: none;
-  padding: 10px;
+  padding: 8px;
+  font-family: var(--font-stack);
   font-size: 1rem;
-  transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
 }
 
 .input-box label {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 6px;
   transform: translateY(-50%);
   padding: 0 5px;
   font-size: 1rem;
@@ -153,6 +156,14 @@ form {
   border-color: #007bff;
 }
 
+.input-box input:valid {
+  border-color: green;
+}
+
+.input-box input:valid + label {
+  color: green;
+}
+
 .input-box input:focus + label,
 .input-box input:not(:placeholder-shown) + label {
   top: -10px;
@@ -160,6 +171,12 @@ form {
   font-size: 1rem;
   color: #007bff;
   padding: 0 5px;
+}
+
+/* Ensure label stays green when input is valid */
+.input-box input:focus:valid + label,
+.input-box input:valid:not(:placeholder-shown) + label {
+  color: green;
 }
 
 input:user-invalid,
