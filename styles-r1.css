@@ -75,25 +75,25 @@ header img {
 }
 
 .heading h1 {
-  margin-top: 12px;
-  font-size: 2rem;
+  margin-top: 24px;
+  font-size: 3rem;
   font-weight: bold;
   color: var(--green);
 }
 
 .heading h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--green);
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 main {
   margin-top: 24px;
   margin-bottom: 24px;
-  width: 32rem; /* var(--card-width); */
-  height: 36rem; /* var(--card-height); */
+  width: var(--card-width);
+  height: var(--card-height);
   background-color: var(--main-bg-color);
   border-radius: 18px;
   padding: 40px 30px;
@@ -186,10 +186,10 @@ input:user-invalid + label {
 
 button {
   width: var(--button-width);
-  height: 40px;
+  height: 45px;
   background-color: var(--green);
   color: white;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 6px;
